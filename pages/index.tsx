@@ -1,10 +1,17 @@
 import type { NextPage } from 'next';
+import 'bootstrap/dist/css/bootstrap.css';
+import Login from '../components/Login/Login';
+import Head from 'next/head';
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <h2 className='bg-red-200'>Headline 1</h2>
-    </div>
+    <>
+      <Head>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+      </Head>
+
+      <Login />
+    </>
   );
 };
 
