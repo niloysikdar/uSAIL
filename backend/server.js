@@ -18,6 +18,9 @@ app.get('/', (req, res) => {
   res.send('Hello from Hackathon .......');
 });
 
+const UserRoutes = require('./routes/user.routes');
+app.use(UserRoutes);
+
 mongoose
   .connect(MONGODB_URL)
   .then(() => app.listen(PORT, () => console.log(`Server is running on PORT: ${PORT}`)))
