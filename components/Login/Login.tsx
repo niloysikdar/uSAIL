@@ -10,17 +10,49 @@ const Login = () => {
           </div>
 
           <div className='w-[50%]'>
-            <div className='bg-white shadow-md rounded-lg m-auto px-[4rem] py-[3rem] flex justify-center items-center'>
-              <form>
-                <div className='mb-4'>
-                  <label htmlFor='username'>Username</label>
+            <div className='grid min-h-screen place-items-center'>
+              <div className='w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12'>
+                <h1 className='text-center text-2xl font-semibold font-mainfont'>Login Now</h1>
+                <form className='mt-6'>
+                  <label
+                    htmlFor='email'
+                    className='block text-lg font-semibold text-gray-600 uppercase'
+                  >
+                    E-mail
+                  </label>
                   <input
-                    className='my-[0.5rem] p-[1rem] bg-slate-100 text-black-700 text-[2rem] font-normal font-codefont focus:outline-none focus:shadow-outline'
-                    id='username'
-                    type='text'
+                    id='email'
+                    type='email'
+                    name='email'
+                    placeholder='john.doe@company.com'
+                    className='block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner rounded'
+                    required
                   />
-                </div>
-              </form>
+                  <label
+                    htmlFor='password'
+                    className='block mt-2 text-lg font-semibold text-gray-600 uppercase'
+                  >
+                    Password
+                  </label>
+                  <input
+                    id='password'
+                    type='password'
+                    name='password'
+                    placeholder='********'
+                    className='block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner rounded'
+                    required
+                  />
+                  <button
+                    type='submit'
+                    className='w-full py-3 mt-6 text-lg font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none'
+                  >
+                    Sign in
+                  </button>
+                  <p className='flex justify-between mt-4 text-xs text-gray-500 cursor-pointer hover:text-black'>
+                    Forgot password?
+                  </p>
+                </form>
+              </div>
             </div>
           </div>
         </div>
