@@ -2,28 +2,7 @@ import type { NextPage } from 'next';
 import { Box, Grid, Typography } from '@mui/material';
 import { Layout, TeamCard } from '../components';
 
-const DepartmentsData = [
-  {
-    value: 'Engineering',
-    teamName: 'Engineering Team',
-    image: require('../assets/engineering.svg'),
-  },
-  {
-    value: 'Marketing',
-    teamName: 'Marketing Team',
-    image: require('../assets/marketing.svg'),
-  },
-  {
-    value: 'Operations',
-    teamName: 'Operations Team',
-    image: require('../assets/operations.svg'),
-  },
-  {
-    value: 'Customer Support',
-    teamName: 'Customer Support',
-    image: require('../assets/customer_support.svg'),
-  },
-];
+import { DepartmentsData } from '../utils';
 
 const Select: NextPage = () => {
   return (
@@ -40,6 +19,7 @@ const Select: NextPage = () => {
                 key={department.value}
                 teamName={department.teamName}
                 image={department.image}
+                value={department.value}
               />
             ))}
           </Grid>
