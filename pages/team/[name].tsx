@@ -1,15 +1,29 @@
 import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
-import { Layout } from '../../components';
+import { useState } from 'react';
+import { Box, Typography } from '@mui/material';
+import { Layout, UserCard } from '../../components';
 
 const TeamDetails: NextPage = () => {
-  const { name } = useRouter().query;
+  const router = useRouter();
+  const { name } = router.query;
+  const [teamName, setTeamName] = useState('Loading...');
 
   return (
     <Layout>
-      <h2>Name: {name}</h2>
+      <Typography variant='h4'>{name}</Typography>
+
+      <Box display='flex' flexWrap='wrap' gap='2.2rem' marginTop='2rem'>
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+        <UserCard />
+      </Box>
     </Layout>
   );
 };
+``;
 
 export default TeamDetails;
