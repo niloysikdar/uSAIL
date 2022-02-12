@@ -33,6 +33,12 @@ export const themeOptions: ThemeOptions = {
     h4: {
       fontFamily: 'Rubik',
     },
+    h5: {
+      fontFamily: 'Poppins',
+    },
+    h6: {
+      fontFamily: 'Lato',
+    },
     subtitle1: {
       fontFamily: 'Rubik',
     },
