@@ -1,8 +1,10 @@
 import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { Box, Typography } from '@mui/material';
-import { Layout, UserCard } from '../../components';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+
+import { Layout, AllUserCard } from '../../components';
 
 const TeamDetails: NextPage = () => {
   const router = useRouter();
@@ -13,17 +15,16 @@ const TeamDetails: NextPage = () => {
     <Layout>
       <Typography variant='h4'>{name}</Typography>
 
-      <Box display='flex' flexWrap='wrap' gap='2.2rem' marginTop='2rem'>
-        <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
+      <Box display='flex' flexWrap='wrap' gap='2.5rem' marginTop='2rem'>
+        <AllUserCard />
+        <AllUserCard />
+        <AllUserCard />
+        <AllUserCard />
+        <AllUserCard />
+        <AllUserCard />
       </Box>
     </Layout>
   );
 };
-``;
 
 export default TeamDetails;

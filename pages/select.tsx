@@ -1,5 +1,7 @@
 import type { NextPage } from 'next';
-import { Box, Grid, Typography } from '@mui/material';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 import { Layout, TeamCard } from '../components';
 
 import { DepartmentsData } from '../utils';
