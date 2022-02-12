@@ -1,17 +1,12 @@
+import { Button, Typography } from '@mui/material';
 import type { NextPage } from 'next';
-import 'bootstrap/dist/css/bootstrap.css';
-import Login from '../components/Login/Login';
-import Head from 'next/head';
 
 const Home: NextPage = () => {
   return (
-    <>
-      <Head>
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-      </Head>
-
-      <Login />
-    </>
+    <div>
+      <Button variant='contained'>This is a button</Button>
+      <Typography variant='h2'>This is a typography</Typography>
+    </div>
   );
 };
 

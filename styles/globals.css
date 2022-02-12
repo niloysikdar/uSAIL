@@ -1,47 +1,4 @@
-/* **************************** Fonts **************************** */
-
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
-
-/* **************************** Components Stylesheets **************************** */
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* **************************** Site General Settings **************************** */
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-/* **************************** Responsive Font Size **************************** */
-
-/* html {
-  font-size: 62.5%;
-}
-
-@media (max-width: 992px) {
-  html {
-    font-size: 60%;
-  }
-}
-
-@media (max-width: 768px) {
-  html {
-    font-size: 55%;
-  }
-} */
-
-/* **************************** Body Settings **************************** */
-
-body {
-  font-family: 'Rubik', sans-serif;
-  background: #ffffff;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@200;300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Rubik:wght@300;400;500;600;700&display=swap');
 
 /* **************************** Scroll Bar **************************** */
 
