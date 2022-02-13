@@ -19,6 +19,7 @@ const Layout: FC<PropTypes> = (props) => {
     if (savedRole !== adminTest.role && props.isProtested) {
       router.replace('/');
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
