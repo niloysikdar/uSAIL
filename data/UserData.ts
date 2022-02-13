@@ -1,4 +1,6 @@
-export const userData = [
+import { UserType } from '../types';
+
+export const userData: UserType[] = [
   {
     id: 1,
     name: 'Jack Wilson',
