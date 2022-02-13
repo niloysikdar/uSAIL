@@ -98,7 +98,7 @@ export const Sidebar: FC = (props) => {
             <MenuIcon />
           </IconButton>
           <Typography variant='h6' noWrap component='div'>
-            Git Bashers OP in the Hackathon
+            uSAIL - Smart Appraisal Index Logs
           </Typography>
         </Toolbar>
       </AppBar>

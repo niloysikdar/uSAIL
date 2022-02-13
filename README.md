@@ -28,15 +28,16 @@ The pre-estimated thresholds of the KPI Metrics determine the Appraisal amount a
 > - The data tracked from their devices is available in exportable and importable format for the solution determine the metrics and sort them into multiple Key Performance Indices (KPIs).
 
 ## THE NEED AND NOVELTY ✒
-As per the market research conducted by  Statista in 2022, there’s an estimated number of 660K+ companies across 140 countries with an employee strength of more than 250 people.
-It is forecasted that by the next 2 years, majority of the big companies will opt for the Work-From-Home model and almost 20% of the employee work force will be WFH. 
+
+As per the market research conducted by Statista in 2022, there’s an estimated number of 660K+ companies across 140 countries with an employee strength of more than 250 people.
+It is forecasted that by the next 2 years, majority of the big companies will opt for the Work-From-Home model and almost 20% of the employee work force will be WFH.
 As can be derived from the trend, employers will switch to a system that allows them a provision for better KPI management, in addition to keeping each employee’s productivity in check. CRM platform like HubSpot and Salesforce and Business analytics platforms like Xero and Sage are already popular tools used by big companies. As a result there’s enough space for uSAIL to become a handy platform by solving an issue that has not been catered to previously.
 
-* Smart Appraisal system with automated metric calculations. 
-* Improves transparency of the appraisal system, for both employers and employees.
-* Streamline reporting of KPIs 
-* Minimal and easy-to-use dashboard.
-* Feature rich for scalability and performance 
+- Smart Appraisal system with automated metric calculations.
+- Improves transparency of the appraisal system, for both employers and employees.
+- Streamline reporting of KPIs
+- Minimal and easy-to-use dashboard.
+- Feature rich for scalability and performance
 
 ## KEY FEATURES 📝
 
@@ -64,7 +65,46 @@ As can be derived from the trend, employers will switch to a system that allows 
 - JavaScript, Express
 - MongoDB
 
+## Testing Credentials 🚀
+
+Admin Account
+
+```
+email: admin@gmail.com
+password: admin@123
+```
+
+Employee Accounts
+
+```
+email: jack@gmail.com
+accessKey: Jsp3PWSRvSZOUC2
+```
+
+```
+email: elisha@gmail.com
+accessKey: dykaHggyKvlHmbg
+```
+
+```
+email: adam@gmail.com
+accessKey: c9pDWICFobG70xK
+```
+
 ## SCREENSHOTS 👀
+
+<p align="center">
+<img src="https://i.imgur.com/DeZTS4g.png" height="220">
+<img src="https://i.imgur.com/m7lrvVR.png" height="220">
+<img src="https://i.imgur.com/zpvPYZw.png" height="220">
+<img src="https://i.imgur.com/kNlCW3R.png" height="220">
+<img src="https://i.imgur.com/rhmeZWX.png" height="220">
+<img src="https://i.imgur.com/rr7EfMX.png" height="220">
+<img src="https://i.imgur.com/eBFnvJE.png" height="220">
+<img src="https://i.imgur.com/87pLQCY.png" height="220">
+<img src="https://i.imgur.com/m54tRDt.png" height="220">
+<img src="https://i.imgur.com/RUwqSRm.png" height="220">
+</p>
 
 ## FUTURE IMPROVEMENTS 💻
 
