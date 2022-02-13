@@ -10,6 +10,12 @@
 
 ### <p align = "center"> uSAIL is a complete Smart Appraisal solution, created for smart employers to automatically determine the appraisal rate for an employee - based on the user data collected from their official devices, using multiple Key Performance Indicators (KPIs) as parameters</p>
 
+<p align="center">
+  <h3 align="center">
+    <a href="https://usail.vercel.app">Live Here</a>
+  </h3>
+</p>
+
 ## INSPIRATION ⭐
 
 It's a known fact that corporate laptops are under full surveillance of the companies. The company can access almost all data on that device like browser history, installed software and programs, screen uptime, sleep cycles of the device, and many more. Therefore, these data can be very useful in creating a brief scorecard of an employee monitoring his overall performance all around the year. There’s a need to create a model to determine the scores based on data acquired from an employee's device so that the company can award appraisals based on these scores.

@@ -26,7 +26,7 @@ const TeamDetails: NextPage = () => {
   useEffect(() => {
     if (name) {
       const res = UserData.filter((user) => user.teamKey === name);
-      setTeamName(res[0].teamName);
+      setTeamName(res.length > 0 ? res[0].teamName : (name as string));
       setUsers(res);
     }
   }, [name]);
