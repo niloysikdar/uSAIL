@@ -41,15 +41,15 @@ const AllUserCard = () => {
 
           <Stack spacing={2} direction='row' margin='0.5rem 0'>
             <IconButton>
-              <VisibilityRounded />
+              <VisibilityRounded color='primary' />
             </IconButton>
 
             <IconButton>
-              <ShareRounded />
+              <ShareRounded color='primary' />
             </IconButton>
 
             <IconButton>
-              <NotificationsRounded />
+              <NotificationsRounded color='primary' />
             </IconButton>
           </Stack>
         </Container>

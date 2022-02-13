@@ -29,7 +29,7 @@ const User: NextPage = () => {
           <PrivateUserCard />
         </Grid>
 
-        <AppraisalMeter />
+        <AppraisalMeter isAdmin={true} />
 
         <Chart1 />
 

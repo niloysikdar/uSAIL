@@ -150,8 +150,8 @@ const Compare: NextPage = () => {
             <Chart5 />
             <Chart5 />
 
-            <AppraisalMeter />
-            <AppraisalMeter />
+            <AppraisalMeter isAdmin={true} />
+            <AppraisalMeter isAdmin={true} />
           </Grid>
         )
       )}
