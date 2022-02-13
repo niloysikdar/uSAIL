@@ -27,8 +27,10 @@ const Compare: NextPage = () => {
   const [user1, setUser1] = useState('niloysikdar30@gmail.com');
   const [user2, setUser2] = useState('niloysikdar30@gmail.com');
   const [isLoading, setIsloading] = useState(false);
+  const [isSelected, setIsselected] = useState(false);
 
   const handleCompare = async () => {
+    setIsselected(true);
     setIsloading(true);
     await new Promise((r) => setTimeout(r, 2000));
     setIsloading(false);
@@ -118,38 +120,40 @@ const Compare: NextPage = () => {
           <CircularProgress size={60} />
         </Box>
       ) : (
-        <Grid
-          container
-          rowSpacing={{ xs: 4, md: 6 }}
-          columnSpacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 4, sm: 4, md: 4, lg: 8 }}
-          padding='2rem 0'
-        >
-          <Grid item xs={4} sm={4} md={4} lg={4}>
-            <PrivateUserCard />
+        isSelected && (
+          <Grid
+            container
+            rowSpacing={{ xs: 4, md: 6 }}
+            columnSpacing={{ xs: 2, md: 3 }}
+            columns={{ xs: 4, sm: 4, md: 4, lg: 8 }}
+            padding='2rem 0'
+          >
+            <Grid item xs={4} sm={4} md={4} lg={4}>
+              <PrivateUserCard />
+            </Grid>
+            <Grid item xs={4} sm={4} md={4} lg={4}>
+              <PrivateUserCard />
+            </Grid>
+
+            <Chart1 />
+            <Chart1 />
+
+            <Chart2 />
+            <Chart2 />
+
+            <Chart3 />
+            <Chart3 />
+
+            <Chart4 />
+            <Chart4 />
+
+            <Chart5 />
+            <Chart5 />
+
+            <AppraisalMeter />
+            <AppraisalMeter />
           </Grid>
-          <Grid item xs={4} sm={4} md={4} lg={4}>
-            <PrivateUserCard />
-          </Grid>
-
-          <Chart1 />
-          <Chart1 />
-
-          <Chart2 />
-          <Chart2 />
-
-          <Chart3 />
-          <Chart3 />
-
-          <Chart4 />
-          <Chart4 />
-
-          <Chart5 />
-          <Chart5 />
-
-          <AppraisalMeter />
-          <AppraisalMeter />
-        </Grid>
+        )
       )}
     </Layout>
   );
