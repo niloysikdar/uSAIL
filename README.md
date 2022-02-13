@@ -94,16 +94,16 @@ accessKey: c9pDWICFobG70xK
 ## SCREENSHOTS 👀
 
 <p align="center">
-<img src="https://i.imgur.com/DeZTS4g.png" height="220">
-<img src="https://i.imgur.com/m7lrvVR.png" height="220">
-<img src="https://i.imgur.com/zpvPYZw.png" height="220">
-<img src="https://i.imgur.com/kNlCW3R.png" height="220">
-<img src="https://i.imgur.com/rhmeZWX.png" height="220">
-<img src="https://i.imgur.com/rr7EfMX.png" height="220">
-<img src="https://i.imgur.com/eBFnvJE.png" height="220">
-<img src="https://i.imgur.com/87pLQCY.png" height="220">
-<img src="https://i.imgur.com/m54tRDt.png" height="220">
-<img src="https://i.imgur.com/RUwqSRm.png" height="220">
+<img src="https://i.imgur.com/DeZTS4g.png" height="200">
+<img src="https://i.imgur.com/m7lrvVR.png" height="200">
+<img src="https://i.imgur.com/zpvPYZw.png" height="200">
+<img src="https://i.imgur.com/kNlCW3R.png" height="200">
+<img src="https://i.imgur.com/rhmeZWX.png" height="200">
+<img src="https://i.imgur.com/rr7EfMX.png" height="200">
+<img src="https://i.imgur.com/eBFnvJE.png" height="200">
+<img src="https://i.imgur.com/87pLQCY.png" height="200">
+<img src="https://i.imgur.com/m54tRDt.png" height="200">
+<img src="https://i.imgur.com/RUwqSRm.png" height="200">
 </p>
 
 ## FUTURE IMPROVEMENTS 💻
