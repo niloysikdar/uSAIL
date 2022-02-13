@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 import { useState, FormEventHandler } from 'react';
-
-import Grid from '@mui/material/Grid';
+import Link from 'next/link';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -59,6 +58,11 @@ const ViewScore: NextPage = () => {
               Submit
             </Button>
           </Box>
+
+          <Typography variant='h6'>Are you an admin?</Typography>
+          <Link href='/' passHref>
+            <Typography style={{ cursor: 'pointer', color: 'blue' }}>View here</Typography>
+          </Link>
         </Paper>
 
         <Paper elevation={5} style={{ padding: '15px 0 20px 25px' }}>
