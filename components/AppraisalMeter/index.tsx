@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 
 const GaugeChart = dynamic(() => import('react-gauge-chart'), { ssr: false });
 
-const AppraisalMeter = ({ isAdmin }: { isAdmin?: boolean }) => {
+const AppraisalMeter = ({ isAdmin, appraisal }: { isAdmin?: boolean; appraisal: number }) => {
   return (
     <Grid item xs={4} sm={4} md={4} lg={4}>
       <Paper style={{ width: 'fit-content', paddingTop: '10px' }}>
@@ -18,7 +18,7 @@ const AppraisalMeter = ({ isAdmin }: { isAdmin?: boolean }) => {
         </Typography>
         <GaugeChart
           id='appraisal'
-          percent={0.8}
+          percent={appraisal / 10}
           formatTextValue={(value) => `${+value / 10} %`}
           textColor='#000'
           arcWidth={0.1}

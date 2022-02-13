@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import Avatar from '@mui/material/Avatar';
 import Card from '@mui/material/Card';
 import Container from '@mui/material/Container';
@@ -7,40 +8,40 @@ import Typography from '@mui/material/Typography';
 import NotificationsRounded from '@mui/icons-material/NotificationsRounded';
 import ShareRounded from '@mui/icons-material/ShareRounded';
 import VisibilityRounded from '@mui/icons-material/VisibilityRounded';
+import { UserDetailsType } from '../../types';
 
-const AllUserCard = () => {
+const AllUserCard = ({ data }: { data: UserDetailsType }) => {
+  const router = useRouter();
+
   return (
     <Card>
       <Stack direction='row' alignItems='center'>
-        <Avatar
-          src='https://randomuser.me/api/portraits/med/men/7.jpg'
-          sx={{ height: '100px', width: '100px', marginLeft: '20px' }}
-        />
+        <Avatar src={data.image} sx={{ height: '100px', width: '100px', marginLeft: '20px' }} />
 
         <Container style={{ marginTop: '8px' }}>
           <Typography variant='h6' fontWeight='600'>
-            Name: Niloy Sikdar
+            Name: {data.name}
           </Typography>
           <Typography variant='body1' fontWeight='600'>
-            Age: 20, Gender: Male
+            Age: {data.age}, Gender: {data.gender}
           </Typography>
           <Typography variant='body1' fontWeight='600'>
-            Engineering Team
+            {data.teamName}
           </Typography>
 
           <Typography variant='body1' fontWeight='600' marginTop='8px'>
-            Email: niloysikdar30@gmail.com
+            Email: {data.email}
           </Typography>
           <Typography variant='body1' fontWeight='600'>
-            Access Key: kw3456fhjs8679j
+            Access Key: {data.accessKey}
           </Typography>
 
           <Typography variant='subtitle1' fontWeight='600' marginTop='8px'>
-            Appraisal Score: 90/100
+            KPI Score: {data.kpiScore}/100
           </Typography>
 
           <Stack spacing={2} direction='row' margin='0.5rem 0'>
-            <IconButton>
+            <IconButton onClick={() => router.push(`/user/${data.id}`)}>
               <VisibilityRounded color='primary' />
             </IconButton>
 

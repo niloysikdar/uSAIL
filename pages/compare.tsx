@@ -22,17 +22,25 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import CircularProgress from '@mui/material/CircularProgress';
+import { UserData } from '../data/UserData';
+import { UserType } from '../types';
 
+const allEmails = UserData.map((user) => user.email);
 const Compare: NextPage = () => {
-  const [user1, setUser1] = useState('niloysikdar30@gmail.com');
-  const [user2, setUser2] = useState('niloysikdar30@gmail.com');
+  const [user1, setUser1] = useState(allEmails[0]);
+  const [user2, setUser2] = useState(allEmails[0]);
+
   const [isLoading, setIsloading] = useState(false);
-  const [isSelected, setIsselected] = useState(false);
+  const [userData1, setUserData1] = useState<UserType>();
+  const [userData2, setUserData2] = useState<UserType>();
 
   const handleCompare = async () => {
-    setIsselected(true);
     setIsloading(true);
     await new Promise((r) => setTimeout(r, 2000));
+    const res1 = UserData.filter((item) => item.email === user1)[0];
+    setUserData1(res1);
+    const res2 = UserData.filter((item) => item.email === user2)[0];
+    setUserData2(res2);
     setIsloading(false);
   };
 
@@ -68,9 +76,11 @@ const Compare: NextPage = () => {
                 label='Email'
                 onChange={(e) => setUser1(e.target.value)}
               >
-                <MenuItem value='niloysikdar30@gmail.com'>niloysikdar30@gmail.com</MenuItem>
-                <MenuItem value='anubhabsarkar@gmail.com'>anubhabsarkar@gmail.com</MenuItem>
-                <MenuItem value='testuser@gmail.com'>testuser@gmail.com</MenuItem>
+                {allEmails.map((email) => (
+                  <MenuItem key={email} value={email}>
+                    {email}
+                  </MenuItem>
+                ))}
               </Select>
             </FormControl>
           </Paper>
@@ -96,9 +106,11 @@ const Compare: NextPage = () => {
                 label='Email'
                 onChange={(e) => setUser2(e.target.value)}
               >
-                <MenuItem value='niloysikdar30@gmail.com'>niloysikdar30@gmail.com</MenuItem>
-                <MenuItem value='anubhabsarkar@gmail.com'>anubhabsarkar@gmail.com</MenuItem>
-                <MenuItem value='testuser@gmail.com'>testuser@gmail.com</MenuItem>
+                {allEmails.map((email) => (
+                  <MenuItem key={email} value={email}>
+                    {email}
+                  </MenuItem>
+                ))}
               </Select>
             </FormControl>
           </Paper>
@@ -120,7 +132,8 @@ const Compare: NextPage = () => {
           <CircularProgress size={60} />
         </Box>
       ) : (
-        isSelected && (
+        userData1 &&
+        userData2 && (
           <Grid
             container
             rowSpacing={{ xs: 4, md: 6 }}
@@ -129,29 +142,29 @@ const Compare: NextPage = () => {
             padding='2rem 0'
           >
             <Grid item xs={4} sm={4} md={4} lg={4}>
-              <PrivateUserCard />
+              <PrivateUserCard data={userData1} />
             </Grid>
             <Grid item xs={4} sm={4} md={4} lg={4}>
-              <PrivateUserCard />
+              <PrivateUserCard data={userData2} />
             </Grid>
 
-            <Chart1 />
-            <Chart1 />
+            <Chart1 values={userData1.data[0]} />
+            <Chart1 values={userData2.data[0]} />
 
-            <Chart2 />
-            <Chart2 />
+            <Chart2 values={userData1.data[1]} />
+            <Chart2 values={userData2.data[1]} />
 
-            <Chart3 />
-            <Chart3 />
+            <Chart3 values={userData1.data[2]} />
+            <Chart3 values={userData2.data[2]} />
 
-            <Chart4 />
-            <Chart4 />
+            <Chart4 values={userData1.data[3]} />
+            <Chart4 values={userData2.data[3]} />
 
-            <Chart5 />
-            <Chart5 />
+            <Chart5 values={userData1.data[4]} />
+            <Chart5 values={userData2.data[4]} />
 
-            <AppraisalMeter isAdmin={true} />
-            <AppraisalMeter isAdmin={true} />
+            <AppraisalMeter isAdmin={true} appraisal={userData1.appraisal} />
+            <AppraisalMeter isAdmin={true} appraisal={userData2.appraisal} />
           </Grid>
         )
       )}

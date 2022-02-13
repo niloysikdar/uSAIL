@@ -3,17 +3,18 @@ import { useState } from 'react';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
+import { CategoryDataType } from '../../types';
 
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
-const Chart1 = () => {
+const Chart1 = ({ values }: { values: CategoryDataType }) => {
   const [data, setData] = useState({
     options: {
       chart: {
-        id: 'apexchart-example',
+        id: 'chart1',
       },
       xaxis: {
-        categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999],
+        categories: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
       },
       title: {
         text: 'Weekly analysis',
@@ -23,7 +24,7 @@ const Chart1 = () => {
     series: [
       {
         name: 'series-1',
-        data: [30, 40, 35, 50, 49, 60, 70, 91, 125],
+        data: values.weeklyData,
       },
     ],
   });
@@ -32,7 +33,7 @@ const Chart1 = () => {
     <Grid item xs={4} sm={4} md={4} lg={4}>
       <Paper style={{ width: 'fit-content', padding: '20px' }}>
         <Typography variant='h5' fontWeight='500' marginBottom='1rem'>
-          1. Productivity Monitoring (30Pts)
+          1. {values.name} ({values.totalPoints}Pts)
         </Typography>
         <Chart options={data.options} series={data.series} type='bar' width={500} height={320} />
       </Paper>

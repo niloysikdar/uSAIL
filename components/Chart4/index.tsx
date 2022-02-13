@@ -3,15 +3,16 @@ import { useState } from 'react';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
+import { CategoryDataType } from '../../types';
 
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
-const Chart4 = () => {
+const Chart4 = ({ values }: { values: CategoryDataType }) => {
   const [data4, setData4] = useState({
     series: [
       {
-        name: 'Desktops',
-        data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
+        name: 'Data',
+        data: values.weeklyData,
       },
     ],
     options: {
@@ -32,7 +33,7 @@ const Chart4 = () => {
         },
       },
       xaxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+        categories: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
       },
     },
   });
@@ -41,7 +42,7 @@ const Chart4 = () => {
     <Grid item xs={4} sm={4} md={4} lg={4}>
       <Paper style={{ width: 'fit-content', padding: '20px' }}>
         <Typography variant='h5' fontWeight='500' marginBottom='1rem'>
-          4. Email and Media Monitoring
+          4. {values.name} ({values.totalPoints}Pts)
         </Typography>
         <Chart options={data4.options} series={data4.series} type='line' width={500} height={320} />
       </Paper>

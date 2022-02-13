@@ -8,6 +8,8 @@ export interface UserDetailsType {
   teamName: string;
   email: string;
   accessKey: string;
+  kpiScore: number;
+  appraisal: number;
 }
 
 export interface CategoryDataType {
@@ -22,6 +24,4 @@ export interface CategoryDataType {
 
 export interface UserType extends UserDetailsType {
   data: CategoryDataType[];
-  kpiScore: number;
-  appraisal: number;
 }
