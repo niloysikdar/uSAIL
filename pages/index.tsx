@@ -10,6 +10,8 @@ import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';
 import { adminTest } from '../data/AdminTest';
 
+import { toast } from 'react-toastify';
+
 const Home: NextPage = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });
   const router = useRouter();
@@ -20,6 +22,9 @@ const Home: NextPage = () => {
       localStorage.setItem('role', adminTest.role);
       router.replace('/select');
     }
+    toast.error('Please enter valid credentials', {
+      position: toast.POSITION.TOP_RIGHT,
+    });
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

@@ -11,6 +11,8 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
 
+import { toast } from 'react-toastify';
+
 const Input = styled('input')({
   display: 'none',
 });
@@ -35,7 +37,19 @@ const TeamDetails: NextPage = () => {
         <Typography variant='h4'>{teamName}</Typography>
 
         <label htmlFor='contained-button-file'>
-          <Input accept='image/*' id='contained-button-file' multiple type='file' />
+          <Input
+            accept='.csv,.xls,.xlsx'
+            id='contained-button-file'
+            multiple={false}
+            type='file'
+            onChange={(e) => {
+              if (e.target.files!.length > 0) {
+                toast.warning("File Parsing isn't available on Beta", {
+                  position: toast.POSITION.TOP_RIGHT,
+                });
+              }
+            }}
+          />
           <Button variant='contained' component='span'>
             Upload New Data
           </Button>

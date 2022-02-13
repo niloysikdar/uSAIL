@@ -9,6 +9,8 @@ import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import Typography from '@mui/material/Typography';
 
+import { toast } from 'react-toastify';
+
 const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
 
 const Notify: NextPage = () => {
@@ -46,7 +48,16 @@ const Notify: NextPage = () => {
             isClickToPauseDisabled={true}
           />
 
-          <Button variant='contained' endIcon={<SendIcon />} sx={{ margin: '1.5rem 0' }}>
+          <Button
+            variant='contained'
+            endIcon={<SendIcon />}
+            sx={{ margin: '1.5rem 0' }}
+            onClick={() =>
+              toast.success('Employees have been notified through email', {
+                position: toast.POSITION.TOP_RIGHT,
+              })
+            }
+          >
             Notify All
           </Button>
         </Paper>

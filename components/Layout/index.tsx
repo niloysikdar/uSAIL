@@ -3,6 +3,9 @@ import { useRouter } from 'next/router';
 import { Sidebar } from '../Sidebar';
 import { adminTest } from '../../data/AdminTest';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
+
 interface PropTypes {
   children?: ReactNode;
   isProtested?: boolean;
@@ -18,7 +21,12 @@ const Layout: FC<PropTypes> = (props) => {
     }
   }, []);
 
-  return <Sidebar>{props.children}</Sidebar>;
+  return (
+    <>
+      <Sidebar>{props.children}</Sidebar>
+      <ToastContainer />
+    </>
+  );
 };
 
 export { Layout };

@@ -7,9 +7,14 @@ import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
+import { toast } from 'react-toastify';
+
 const Invite: NextPage = () => {
   const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
+    toast.success('New admin has been invited', {
+      position: toast.POSITION.TOP_RIGHT,
+    });
   };
 
   return (
@@ -39,7 +44,7 @@ const Invite: NextPage = () => {
             alignItems='center'
             onSubmit={handleSubmit}
           >
-            <TextField label='Email' variant='outlined' fullWidth type='email' required />
+            <TextField label='Email' variant='outlined' fullWidth type='email' required={true} />
             <Button type='submit' variant='contained' sx={{ marginTop: '1.5rem' }}>
               Submit
             </Button>
