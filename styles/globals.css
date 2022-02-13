@@ -2,22 +2,15 @@
 
 /* **************************** Scroll Bar **************************** */
 
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 7px;
   height: 6px;
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--primarywhite);
+  background: #5e3bbe;
   border-radius: 2px;
-} */
-
-/* **************************** Selection **************************** */
-
-/* ::selection {
-  color: var(--primarywhite);
-  background: var(--primarycolor);
-} */
+}
 
 /* **************************** User Select None **************************** */
 
