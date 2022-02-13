@@ -8,7 +8,7 @@ const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 const Chart5 = () => {
   const [data, setData] = useState({
-    series: [70],
+    series: [8.65],
     options: {
       chart: {
         id: 'chart5',
@@ -21,7 +21,7 @@ const Chart5 = () => {
           },
         },
       },
-      labels: ['Scoring Percentage'],
+      labels: ['Average'],
     },
   });
 
