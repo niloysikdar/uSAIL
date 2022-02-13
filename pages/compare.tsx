@@ -45,7 +45,7 @@ const Compare: NextPage = () => {
   };
 
   return (
-    <Layout>
+    <Layout isProtested={true}>
       <Typography variant='h4' textAlign='center'>
         Compare Between 2 Employees
       </Typography>

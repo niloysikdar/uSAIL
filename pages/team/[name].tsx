@@ -30,7 +30,7 @@ const TeamDetails: NextPage = () => {
   }, [name]);
 
   return (
-    <Layout>
+    <Layout isProtested={true}>
       <Stack direction='row' alignItems='center' spacing={2}>
         <Typography variant='h4'>{teamName}</Typography>
 

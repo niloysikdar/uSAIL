@@ -8,7 +8,7 @@ import { DepartmentsData } from '../utils';
 
 const Select: NextPage = () => {
   return (
-    <Layout>
+    <Layout isProtested={true}>
       <Typography variant='h4' textAlign='center'>
         Select the Department
       </Typography>

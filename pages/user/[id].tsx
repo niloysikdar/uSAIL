@@ -29,7 +29,7 @@ const User: NextPage = () => {
   }, [id]);
 
   return (
-    <Layout>
+    <Layout isProtested={true}>
       {user && (
         <Grid
           container

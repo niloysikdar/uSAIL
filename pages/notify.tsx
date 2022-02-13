@@ -22,7 +22,7 @@ const Notify: NextPage = () => {
   };
 
   return (
-    <Layout>
+    <Layout isProtested={true}>
       <Box display='flex' justifyContent='center'>
         <Paper
           style={{
