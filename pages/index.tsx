@@ -1,16 +1,31 @@
 import type { NextPage } from 'next';
 import Link from 'next/link';
-import { FormEventHandler } from 'react';
+import { useRouter } from 'next/router';
+import { ChangeEvent, FormEventHandler, useState } from 'react';
 import { Layout } from '../components';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';
+import { adminTest } from '../data/AdminTest';
 
 const Home: NextPage = () => {
+  const [formData, setFormData] = useState({ email: '', password: '' });
+  const router = useRouter();
+
   const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
+    if (formData.email === adminTest.email && formData.password === adminTest.password) {
+      localStorage.setItem('role', adminTest.role);
+      router.replace('/select');
+    }
+  };
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData((data) => {
+      return { ...data, [e.target.id]: e.target.value };
+    });
   };
 
   return (
@@ -40,7 +55,16 @@ const Home: NextPage = () => {
             alignItems='center'
             onSubmit={handleSubmit}
           >
-            <TextField label='Email' variant='outlined' fullWidth type='email' required />
+            <TextField
+              label='Email'
+              variant='outlined'
+              fullWidth
+              type='email'
+              required
+              value={formData.email}
+              id='email'
+              onChange={handleChange}
+            />
             <TextField
               label='Password'
               variant='outlined'
@@ -48,6 +72,9 @@ const Home: NextPage = () => {
               type='password'
               required
               style={{ marginTop: '1rem' }}
+              id='password'
+              value={formData.password}
+              onChange={handleChange}
             />
             <Button type='submit' variant='contained' sx={{ marginTop: '1.5rem' }}>
               Submit
