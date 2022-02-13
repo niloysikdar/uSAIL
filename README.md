@@ -8,7 +8,7 @@
 <img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg">  
 </p>
 
-### <p align = "center"> uSAIL is a complete Smart Appraisal solution, created for smart employers to automatically determine the appraisal rate for an employee - based on the user data collected from their official devices, using multiple Key Performance Indices (KPIs) as parameters</p>
+### <p align = "center"> uSAIL is a complete Smart Appraisal solution, created for smart employers to automatically determine the appraisal rate for an employee - based on the user data collected from their official devices, using multiple Key Performance Indicators (KPIs) as parameters</p>
 
 ## INSPIRATION ⭐
 
@@ -28,6 +28,15 @@ The pre-estimated thresholds of the KPI Metrics determine the Appraisal amount a
 > - The data tracked from their devices is available in exportable and importable format for the solution determine the metrics and sort them into multiple Key Performance Indices (KPIs).
 
 ## THE NEED AND NOVELTY ✒
+As per the market research conducted by  Statista in 2022, there’s an estimated number of 660K+ companies across 140 countries with an employee strength of more than 250 people.
+It is forecasted that by the next 2 years, majority of the big companies will opt for the Work-From-Home model and almost 20% of the employee work force will be WFH. 
+As can be derived from the trend, employers will switch to a system that allows them a provision for better KPI management, in addition to keeping each employee’s productivity in check. CRM platform like HubSpot and Salesforce and Business analytics platforms like Xero and Sage are already popular tools used by big companies. As a result there’s enough space for uSAIL to become a handy platform by solving an issue that has not been catered to previously.
+
+* Smart Appraisal system with automated metric calculations. 
+* Improves transparency of the appraisal system, for both employers and employees.
+* Streamline reporting of KPIs 
+* Minimal and easy-to-use dashboard.
+* Feature rich for scalability and performance 
 
 ## KEY FEATURES 📝
 * Employers can generate a unique Access Key for all their employees and send a notification mail to them. The employees can login to the platform and check their KPI scorecard and rewarded Appraisal value.
