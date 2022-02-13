@@ -1,4 +1,5 @@
 # <p align = "center"> uSAIL - Smart Appraisal Index Logs </p>
+
 <p align="center">
   <img src="https://i.pinimg.com/originals/4d/d9/46/4dd946d658c8ab10644072b17ccb2fe3.jpg">
  </p>
@@ -13,28 +14,26 @@
 
 ## OUR SOLUTION 📌
 
-
 ## THE NEED AND NOVELTY ✒
-
 
 ## KEY FEATURES 📝
 
-
 ## TECH STACK USED ⚙
-* Next.js
-* React
-* TypeScript
-* Material UI
-* Node.js
-* JavaScript, Express
-* MongoDB
+
+- Next.js
+- React
+- TypeScript
+- Material UI
+- Node.js
+- JavaScript, Express
+- MongoDB
 
 ## SCREENSHOTS 👀
 
-
-## FUTURE IMPROVEMENTS  💻
+## FUTURE IMPROVEMENTS 💻
 
 ## Project Authors 👨‍💻
-* Niloy Sikdar
-* Anubhab Sarkar
-* Niladri Mondal
+
+- Niloy Sikdar
+- Anubhab Sarkar
+- Niladri Mondal
