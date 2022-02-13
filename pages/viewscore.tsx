@@ -12,16 +12,22 @@ import Container from '@mui/material/Container';
 import CircularProgress from '@mui/material/CircularProgress';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import { AppraisalMeter } from '../components';
+import { UserData } from '../data/UserData';
+import { UserType } from '../types';
 
 const ViewScore: NextPage = () => {
   const [isLoading, setIsloading] = useState(false);
-  const [userData, setUserdata] = useState(false);
+  const [formData, setFormdata] = useState({ email: '', accessKey: '' });
+  const [userData, setUserdata] = useState<UserType>();
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
-    setUserdata(true);
     setIsloading(true);
     await new Promise((r) => setTimeout(r, 2000));
+    const res = UserData.filter(
+      (user) => user.email === formData.email && user.accessKey === formData.accessKey,
+    )[0];
+    setUserdata(res);
     setIsloading(false);
   };
 
@@ -45,7 +51,19 @@ const ViewScore: NextPage = () => {
             margin='1rem 0'
             onSubmit={handleSubmit}
           >
-            <TextField label='Email' variant='outlined' fullWidth type='email' required />
+            <TextField
+              label='Email'
+              variant='outlined'
+              fullWidth
+              type='email'
+              required
+              value={formData.email}
+              onChange={(e) =>
+                setFormdata((data) => {
+                  return { ...data, email: e.target.value };
+                })
+              }
+            />
             <TextField
               label='Access Key'
               variant='outlined'
@@ -53,6 +71,12 @@ const ViewScore: NextPage = () => {
               type='text'
               required
               sx={{ marginTop: '1.2rem' }}
+              value={formData.accessKey}
+              onChange={(e) =>
+                setFormdata((data) => {
+                  return { ...data, accessKey: e.target.value };
+                })
+              }
             />
             <Button type='submit' variant='contained' sx={{ marginTop: '1.5rem' }}>
               Submit
@@ -81,35 +105,54 @@ const ViewScore: NextPage = () => {
           ) : userData ? (
             <>
               <Stack direction='row' spacing={5} alignItems='center'>
-                <Avatar
-                  src='https://randomuser.me/api/portraits/med/men/7.jpg'
-                  sx={{ height: '100px', width: '100px' }}
-                />
+                <Avatar src={userData.image} sx={{ height: '100px', width: '100px' }} />
                 <Box>
-                  <Typography variant='h5'>Name: Niloy Sikdar</Typography>
-                  <Typography variant='h6'>Age: 20, Gender: Male</Typography>
-                  <Typography variant='h6'>Engineering Team</Typography>
+                  <Typography variant='h5'>Name: {userData.name}</Typography>
+                  <Typography variant='h6'>
+                    Age: {userData.age}, Gender: {userData.gender}
+                  </Typography>
+                  <Typography variant='h6'>{userData.teamName}</Typography>
                 </Box>
               </Stack>
 
               <Stack direction='row' spacing={2} marginTop='1.5rem'>
-                <AppraisalMeter />
+                <AppraisalMeter appraisal={userData.appraisal} />
 
                 <Container style={{ marginLeft: '50px', paddingRight: '0' }}>
-                  <CategoryData />
+                  <CategoryData
+                    categoryName={userData.data[0].name}
+                    score={userData.data[0].score}
+                    remarks={userData.data[0].remark}
+                  />
                 </Container>
               </Stack>
 
               <Stack direction='row' spacing={5} marginTop='1.5rem'>
-                <CategoryData />
+                <CategoryData
+                  categoryName={userData.data[1].name}
+                  score={userData.data[1].score}
+                  remarks={userData.data[1].remark}
+                />
 
-                <CategoryData />
+                <CategoryData
+                  categoryName={userData.data[2].name}
+                  score={userData.data[2].score}
+                  remarks={userData.data[2].remark}
+                />
               </Stack>
 
               <Stack direction='row' spacing={5} marginTop='1.5rem'>
-                <CategoryData />
+                <CategoryData
+                  categoryName={userData.data[3].name}
+                  score={userData.data[3].score}
+                  remarks={userData.data[3].remark}
+                />
 
-                <CategoryData />
+                <CategoryData
+                  categoryName={userData.data[4].name}
+                  score={userData.data[4].score}
+                  remarks={userData.data[4].remark}
+                />
               </Stack>
             </>
           ) : (
@@ -123,7 +166,15 @@ const ViewScore: NextPage = () => {
   );
 };
 
-const CategoryData = () => {
+const CategoryData = ({
+  categoryName,
+  score,
+  remarks,
+}: {
+  categoryName: string;
+  score: number;
+  remarks: string;
+}) => {
   return (
     <Paper
       style={{
@@ -135,11 +186,13 @@ const CategoryData = () => {
         padding: '10px 15px',
       }}
     >
-      <Typography variant='body2'>1. Productivity Monitoring</Typography>
+      <Typography variant='body2' maxWidth='170px' textAlign='center'>
+        {categoryName}
+      </Typography>
       <EmojiEventsIcon color='primary' fontSize='large' />
-      <Typography variant='subtitle2'>Score: 30</Typography>
+      <Typography variant='subtitle2'>Score: {score}</Typography>
       <Typography variant='body2' marginBottom='0.4rem'>
-        Highly Productive
+        {remarks}
       </Typography>
     </Paper>
   );
