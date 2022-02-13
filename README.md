@@ -30,6 +30,20 @@ The pre-estimated thresholds of the KPI Metrics determine the Appraisal amount a
 ## THE NEED AND NOVELTY ✒
 
 ## KEY FEATURES 📝
+* Employers can generate a unique Access Key for all their employees and send a notification mail to them. The employees can login to the platform and check their KPI scorecard and rewarded Appraisal value.
+
+* Admins can see the complete overview of the KPI details as well as the automatically estimated Appraisal value for a particular employee, from the imported KPI data in a dedicated Dashboard. 
+
+* Administrators (Managers, Team Leads) can compare the KPI data between 2 employees side-by-side and can see the overall appraisal status of all employees in a particular team.
+
+* All figurative data is visualized by the application, allowing users to gain insight about the performance.
+
+* Support for Multiple Teams under the same organization. 
+
+* Employers can provide access to the Admin dashboard by invite notification email to anyone with a single-click.
+
+* Appraisal value is automatically estimated by the system. The admins (employers) can change the KPI thresholds to suit their organization. 
+
 
 ## TECH STACK USED ⚙
 
