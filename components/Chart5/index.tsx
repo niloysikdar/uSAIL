@@ -30,7 +30,7 @@ const Chart5 = ({ values }: { values: CategoryDataType }) => {
     <Grid item xs={4} sm={4} md={4} lg={4}>
       <Paper style={{ width: 'fit-content', padding: '20px' }}>
         <Typography variant='h5' fontWeight='500' marginBottom='1rem'>
-          5. {values.name} ({values.totalPoints}Pts)
+          5. {values.name} ({values.score}/{values.totalPoints})
         </Typography>
         <Chart
           options={data.options}
